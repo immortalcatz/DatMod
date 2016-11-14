@@ -1,0 +1,17 @@
+[
+	{
+		"modid": "datmod",
+		"name": "DatMod",
+		"description": "It's just DatMod",
+		"version": "${version}",
+		"mcversion": "${mcversion}",
+		"url": "",
+		"updateUrl": "",
+		"authorList": [
+			"xlxAciDxlx"
+		],
+		"logoFile": "",
+		"screenshots": [],
+		"dependencies": []
+	}
+]

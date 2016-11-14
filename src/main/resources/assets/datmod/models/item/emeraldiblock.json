@@ -1,0 +1,6 @@
+{
+	"parent": "datmod:block/emeraldiblock",
+	"textures": {
+		"layer0": "datmod:items/emeraldi"
+	}
+}

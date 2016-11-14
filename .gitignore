@@ -1,0 +1,44 @@
+## General Files
+*.ini
+*.hprof
+changelog.template
+## Hehehe >:)
+PLANNED_FEATURES.md
+
+## General Folders
+build
+run
+src/api
+src/test
+
+## General Files/Folders
+
+## Eclipse
+eclipse
+.metadata
+.classpath
+.project
+bin
+
+## ForgeGradle
+run
+*.launch
+
+## GEdit
+*~
+
+## Gradle
+.gradle
+gradle
+gradle.properties
+gradlew
+gradlew.bat
+build.gradle
+
+## IntelliJ Idea
+atlassian-ide-plugin.xml
+out
+.idea
+*.iml
+*.ipr
+*.iws

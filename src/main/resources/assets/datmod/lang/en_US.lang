@@ -1,0 +1,65 @@
+#
+# English US
+#
+
+# Creative Tabs
+itemGroup.datmod_blocks=DatMod - Blocks
+itemGroup.datmod_dusts=DatMod - Dusts
+itemGroup.datmod_ingots=DatMod - Ingots
+itemGroup.datmod_items=DatMod - Items
+itemGroup.datmod_ores=DatMod - Ores
+itemGroup.datmod_tools=DatMod - Tools
+
+# Blocks
+tile.diamondiumblock.name=Diamondium Block
+tile.emeraldiblock.name=Emeraldi Block
+tile.goldiriteblock.name=Goldirite Block
+tile.ironiumblock.name=Ironium Block
+
+# Dusts
+item.diamondiumdust.name=Diamondium Dust
+item.emeraldidust.name=Emeraldi Dust
+item.goldiritedust.name=Goldirite Dust
+item.ironiumdust.name=Ironium Dust
+
+# Ingots
+item.diamondiumingot.name=Diamondium Ingot
+item.emeraldiingot.name=Emeraldi Ingot
+item.goldiriteingot.name=Goldirite Ingot
+item.ironiumingot.name=Ironium Ingot
+
+# Normal Items
+item.diamondiumaxe.name=Diamondium Axe
+item.diamondiumpickaxe.name=Diamondium Pickaxe
+item.diamondiumshovel.name=Diamondium Shovel
+item.diamondiumsword.name=Diamondium Sword
+
+item.emeraldiaxe.name=Emeraldi Axe
+item.emeraldipickaxe.name=Emeraldi Pickaxe
+item.emeraldishovel.name=Emeraldi Shovel
+item.emeraldisword.name=Emeraldi Sword
+
+item.goldiriteaxe.name=Goldirite Axe
+item.goldiritepickaxe.name=Goldirite Pickaxe
+item.goldiriteshovel.name=Goldirite Shovel
+item.goldiritesword.name=Goldirite Sword
+
+item.ironiumaxe.name=Ironium Axe
+item.ironiumpickaxe.name=Ironium Pickaxe
+item.ironiumshovel.name=Ironium Shovel
+item.ironiumsword.name=Ironium Sword
+
+item.magnet.name=Magnet
+
+# Ores
+item.diamondiumore.name=Diamondium Ore
+tile.diamondiumore.name=Diamondium Ore
+
+item.emeraldiore.name=Emeraldi Ore
+tile.emeraldiore.name=Emeraldi Ore
+
+item.goldiriteore.name=Goldirite Ore
+tile.goldiriteore.name=Goldirite Ore
+
+item.ironiumore.name=Ironium Ore
+tile.ironiumore.name=Ironium Ore

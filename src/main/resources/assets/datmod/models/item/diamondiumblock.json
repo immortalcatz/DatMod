@@ -1,0 +1,6 @@
+{
+	"parent": "datmod:block/diamondiumblock",
+	"textures": {
+		"layer0": "datmod:items/diamondium"
+	}
+}
