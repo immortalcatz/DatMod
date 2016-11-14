@@ -1,10 +1,5 @@
 # Features
 
-| Legend                              	|
-|-------------------------------------	|
-| [Ores/Ingots](#ores_ingots)         	|
-| [Tools/Utilities](#tools_utilities) 	|
-
 ### Ores/Ingots
 - Ironium
 - Emeraldi
