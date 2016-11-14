@@ -1,5 +1,5 @@
 ![DatMod](https://github.com/xlxAciDxlx/DatMod/raw/master/src/main/resources/assets/datmod/DatMod.png)
-Just a mod of miscellaneous bits & bobs, gadgets & gizmos.
+A mod of miscellaneous bits & bobs, gadgets & gizmos.
 
 ### Current Version
 The current version of **DatMod** is v*0.0.1*, released *November 14th, 2016*.

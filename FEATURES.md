@@ -2,13 +2,32 @@
 
 ### Ores/Ingots
 - Ironium
+  *Slightly* more durable/powerful than *Iron*
 - Emeraldi
+  *Slightly* more durable/powerful than *Emerald*
 - Goldirite
+  *Slightly* more durable/powerful than *Gold*
 - Diamondium
+  *Slightly* more durable/powerful than *Diamond*
 
 ### Tools/Utilities
-- **Diamondium Sword** - a slightly more durable and harder hitting Diamond Sword
-- **Diamondium Pickaxe** - a slightly more durable Diamond Pick
-- **Diamondium Shovel** - a slightly more durable Diamond Shovel
-- **Diamondium Axe** - a slightly more durable Diamond Axe
-- **Magnet** - pulls items/XP towards player
+- **Axes**
+    - Diamondium
+    - Emeraldi
+    - Goldirite
+    - Ironium
+- **Pickaxes**
+    - Diamondium
+    - Emeraldi
+    - Goldirite
+    - Ironium
+- **Shovels**
+    - Diamondium
+    - Emeraldi
+    - Goldirite
+    - Ironium
+- **Swords**
+    - Diamondium
+    - Emeraldi
+    - Goldirite
+    - Ironium

@@ -2,15 +2,15 @@
 	{
 		"modid": "datmod",
 		"name": "DatMod",
-		"description": "It's just DatMod",
+		"description": "A mod of miscellaneous bits & bobs, gadgets & gizmos.",
 		"version": "${version}",
 		"mcversion": "${mcversion}",
-		"url": "",
+		"url": "http://github.com/xlxAciDxlx/DatMod/",
 		"updateUrl": "",
 		"authorList": [
 			"xlxAciDxlx"
 		],
-		"logoFile": "",
+		"logoFile": "assets/datmod/DatMod.png",
 		"screenshots": [],
 		"dependencies": []
 	}
