@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.Materials;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class EmeraldiSword extends BaseItemSword {
-	public EmeraldiSword() {
+class EmeraldiSword extends BaseItemSword {
+	/**
+	 * Constructs the Emeraldi Sword
+	 */
+	EmeraldiSword() {
 		super(Materials.emeraldi, "Emeraldi Sword");
 
 		setImplemented(true);

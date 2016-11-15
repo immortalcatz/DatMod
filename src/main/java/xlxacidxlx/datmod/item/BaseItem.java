@@ -12,8 +12,13 @@ import java.util.List;
  * Created by Acid on 11/1/2016.
  */
 public class BaseItem extends net.minecraft.item.Item {
-	public boolean implemented = false;
+	private boolean implemented = false;
 
+	/**
+	 * Constructs the BaseItem
+	 *
+	 * @param name The name of the item
+	 */
 	public BaseItem(String name) {
 		setCreativeTab(CreativeTabs.items);
 
@@ -31,24 +36,38 @@ public class BaseItem extends net.minecraft.item.Item {
 		super.addInformation(stack, playerIn, tooltip, advanced);
 	}
 
+	/**
+	 * Gets the items model location
+	 *
+	 * @return ModelResourceLocation
+	 */
 	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 
+	/**
+	 * Gets the item's name
+	 *
+	 * @return String
+	 */
 	public String getName() {
 		return this.toString().toLowerCase();
 	}
 
-	public boolean isImplemented() {
+	/**
+	 * Checks if the item is set as implemented
+	 *
+	 * @return boolean
+	 */
+	private boolean isImplemented() {
 		return this.implemented;
 	}
 
-	@Override
-	public boolean onDroppedByPlayer(ItemStack item, EntityPlayer player) {
-		// TODO: Check if the magnet is active, and if it is cancel the drop of the item..
-		return super.onDroppedByPlayer(item, player);
-	}
-
+	/**
+	 * Sets if the item is implemented
+	 *
+	 * @param implemented True/false
+	 */
 	public void setImplemented(boolean implemented) {
 		this.implemented = implemented;
 	}

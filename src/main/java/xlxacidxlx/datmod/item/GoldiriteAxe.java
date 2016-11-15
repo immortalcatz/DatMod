@@ -5,10 +5,12 @@ import xlxacidxlx.datmod.Materials;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class GoldiriteAxe extends BaseItemAxe {
-	protected GoldiriteAxe() {
+class GoldiriteAxe extends BaseItemAxe {
+	/**
+	 * Constructs the Goldirite Axe
+	 */
+	GoldiriteAxe() {
 		super(Materials.goldirite, "Goldirite Axe", Materials.goldirite.getDamageVsEntity(), Materials.goldirite.getEfficiencyOnProperMaterial());
-		// TODO: Properly set damage and speed
 
 		setImplemented(true);
 	}

@@ -21,16 +21,16 @@ import java.io.File;
 @Mod(modid = DatMod.MODID, version = DatMod.VERSION, name = DatMod.NAME, updateJSON = "http://raw.githubusercontent.com/xlxAciDxlx/DatMod/VERSION.md")
 public class DatMod {
 	public static final String MODID = "datmod";
-	public static final String VERSION = "0.0.3";
+	public static final String VERSION = "1.0.0";
 	public static final String NAME = "DatMod";
 
 	@SidedProxy(clientSide = "xlxacidxlx.datmod.proxy.ClientProxy", serverSide = "xlxacidxlx.datmod.proxy.CommonProxy")
-	public static CommonProxy proxy;
+	private static CommonProxy proxy;
 
 	@Mod.Instance
 	public static DatMod instance;
 
-	public static xlxacidxlx.datmod.creativetab.CreativeTabs creativeTabs;
+	private static xlxacidxlx.datmod.creativetab.CreativeTabs creativeTabs;
 	public static Logger logger = LogManager.getLogger(DatMod.NAME);
 
 	@EventHandler
@@ -38,13 +38,6 @@ public class DatMod {
 		File configDir = new File(event.getModConfigurationDirectory() + "/" + DatMod.NAME);
 		configDir.mkdirs();
 		ConfigHandler.init(new File(configDir.getPath(), DatMod.NAME + ".cfg"));
-
-		if (!ConfigHandler.enableMod) {
-			// TODO: Figure out some way to stop the mod from loading if it's disabled via config..
-			logger.info("The mod is disabled!");
-		}
-
-		// TODO: Eventually split all the categories of configs into their own file (e.x. core.cfg, general.cfg, world.cfg)
 
 		creativeTabs = new xlxacidxlx.datmod.creativetab.CreativeTabs();
 
@@ -57,7 +50,6 @@ public class DatMod {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// TODO: Work on this
 		proxy.init(event);
 		ModRecipes.init();
 		GameRegistry.registerWorldGenerator(new OreGenerator(), 1);
@@ -72,7 +64,6 @@ public class DatMod {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		// TODO: Work on this
 		proxy.postInit(event);
 		ModEvents.postInit();
 

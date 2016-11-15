@@ -1,7 +1,22 @@
 # Changelog
 The following is a list of changes in each release of the mod.
 
-### 0.0.3 - Cleverly Titled Update
+## 1.0.0 - The Gold Update
+This update has a few minor changes. It's recommend to update to this version.
+
+### Changes
+- General code cleanup
+- Update "README.md", "VERSION.md", "src/main/java/xlxacidxlx/datmod/DatMod.java"
+  - Changes version number to *1.0.0*
+
+- Bug/Issue Changes
+  - Fixes #1 - Adds documentation to the code to aid in development
+  - Fixes #11 - Adds more configuration options
+  - Fixes #12 - Adjusted Ore Generation
+  - Fixes #14 - All Tools Have Identical Statistics
+  - Fixes #15 - Magnet State Doesn't Persist on Reload
+
+## 0.0.3 - Cleverly Titled Update
 This update has a few minor code improvements. It's not a required update as no bugs were fixed, but I would recommend it if you want to stay current.
 
 ### Changes
@@ -10,10 +25,10 @@ This update has a few minor code improvements. It's not a required update as no 
 - Work on #12 
 - Fixes #10 - Gives the "welcome" message some color and flair. Also adds a configuration option to disable the message if you find it annoying.
 
-### 0.0.2 - The Fix Update
+## 0.0.2 - The Fix Update
 This update just fixes a few of the bugs/issues I found after initially releasing the mod. No breaking changes are present in this build.
 
-#### Changes
+### Changes
 - Bug/Issue Fixes
   - Fixes #2 - Magnet can replace other items
   - Fixes #3 - "Welcome" message displays twice
@@ -22,4 +37,4 @@ This update just fixes a few of the bugs/issues I found after initially releasin
   - Fixes #8 - Classes Need Creation Header
   - Fixes #9 - Missing JEI Dependency
 
-### 0.0.1 - Initial Release
+## 0.0.1 - Initial Release

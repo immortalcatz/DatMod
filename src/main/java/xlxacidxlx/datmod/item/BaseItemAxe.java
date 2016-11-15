@@ -12,10 +12,18 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class BaseItemAxe extends ItemAxe {
-	public boolean implemented = false;
+class BaseItemAxe extends ItemAxe {
+	private boolean implemented = false;
 
-	protected BaseItemAxe(ToolMaterial material, String name, float damage, float speed) {
+	/**
+	 * Constructs the BaseItemAxe
+	 *
+	 * @param material The material the axe is made of
+	 * @param name     The name of the axe
+	 * @param damage   The amount of damage the axe has
+	 * @param speed    How fast the axe is
+	 */
+	BaseItemAxe(ToolMaterial material, String name, float damage, float speed) {
 		super(material, damage, speed);
 
 		setCreativeTab(CreativeTabs.tools);
@@ -34,14 +42,29 @@ public class BaseItemAxe extends ItemAxe {
 		super.addInformation(stack, playerIn, tooltip, advanced);
 	}
 
-	public ModelResourceLocation getModelResourceLocation() {
+	/**
+	 * Gets the items model location
+	 *
+	 * @return ModelResourceLocation
+	 */
+	ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 
-	public boolean isImplemented() {
+	/**
+	 * Checks if the item is set as implemented
+	 *
+	 * @return boolean
+	 */
+	private boolean isImplemented() {
 		return this.implemented;
 	}
 
+	/**
+	 * Sets if the item is implemented
+	 *
+	 * @param implemented True/false
+	 */
 	public void setImplemented(boolean implemented) {
 		this.implemented = implemented;
 	}

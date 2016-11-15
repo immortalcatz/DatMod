@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.Materials;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class IroniumPickaxe extends BaseItemPickaxe {
-	public IroniumPickaxe() {
+class IroniumPickaxe extends BaseItemPickaxe {
+	/**
+	 * Constructs the Ironium Pickaxe
+	 */
+	IroniumPickaxe() {
 		super(Materials.ironium, "Ironium Pickaxe");
 
 		setImplemented(true);

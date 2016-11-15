@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.Materials;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class GoldiritePickaxe extends BaseItemPickaxe {
-	public GoldiritePickaxe() {
+class GoldiritePickaxe extends BaseItemPickaxe {
+	/**
+	 * Constructs the Goldirite Pickaxe
+	 */
+	GoldiritePickaxe() {
 		super(Materials.goldirite, "Goldirite Pickaxe");
 
 		setImplemented(true);

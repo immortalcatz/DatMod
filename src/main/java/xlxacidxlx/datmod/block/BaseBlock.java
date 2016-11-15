@@ -19,10 +19,16 @@ import java.util.List;
 /**
  * Created by Acid on 10/26/2016.
  */
-public class BaseBlock extends Block {
-	public boolean implemented = false;
+class BaseBlock extends Block {
+	private boolean implemented = false;
 
-	public BaseBlock(Material materialIn, String name) {
+	/**
+	 * Constructs the BaseBlock class
+	 *
+	 * @param materialIn The type of material the block is made of
+	 * @param name       The name of the block
+	 */
+	BaseBlock(Material materialIn, String name) {
 		super(materialIn);
 
 		setCreativeTab(CreativeTabs.blocks);
@@ -32,12 +38,17 @@ public class BaseBlock extends Block {
 		setUnlocalizedName(name);
 
 		setHardness(1.5f);
-		setHarvestLevel("pickaxe", 2); // TODO: This may need to be changed..
+		setHarvestLevel("pickaxe", 2);
 		setResistance(10.0f);
 		setSoundType(SoundType.STONE);
 	}
 
-	public BaseBlock(String name) {
+	/**
+	 * Constructs the BaseBlock class
+	 *
+	 * @param name The name of the block
+	 */
+	BaseBlock(String name) {
 		super(Material.ROCK);
 
 		setCreativeTab(CreativeTabs.blocks);
@@ -47,7 +58,7 @@ public class BaseBlock extends Block {
 		setUnlocalizedName(name);
 
 		setHardness(1.5f);
-		setHarvestLevel("pickaxe", 2); // TODO: This may need to be changed..
+		setHarvestLevel("pickaxe", 2);
 		setResistance(10.0f);
 		setSoundType(SoundType.STONE);
 	}
@@ -63,14 +74,20 @@ public class BaseBlock extends Block {
 
 	@Override
 	public boolean canDropFromExplosion(Explosion explosion) {
-		return false; // TODO: Possibly change this for certain blocks..
+		return false;
 	}
 
-	public ModelResourceLocation getModelResourceLocation() {
+	/**
+	 * Returns the model's resource location
+	 */
+	ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 
-	public ResourceLocation getResourceLocation() {
+	/**
+	 * Gets the block's resource location
+	 */
+	ResourceLocation getResourceLocation() {
 		return getRegistryName();
 	}
 
@@ -79,10 +96,18 @@ public class BaseBlock extends Block {
 		return false;
 	}
 
-	public boolean isImplemented() {
+	/**
+	 * Checks if the block is marked as implemented
+	 */
+	private boolean isImplemented() {
 		return this.implemented;
 	}
 
+	/**
+	 * Sets the implemented state to the specified boolean
+	 *
+	 * @param implemented True/false
+	 */
 	public void setImplemented(boolean implemented) {
 		this.implemented = implemented;
 	}

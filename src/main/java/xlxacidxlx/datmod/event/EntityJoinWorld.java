@@ -1,5 +1,6 @@
 package xlxacidxlx.datmod.event;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
@@ -14,17 +15,21 @@ import xlxacidxlx.datmod.ConfigHandler;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.item.ModItems;
 
+import java.util.Set;
+
 /**
  * Created by Acid on 10/26/2016.
  */
-public class EntityJoinWorld {
+class EntityJoinWorld {
 	@SubscribeEvent
 	public void entityJoinWorld(EntityJoinWorldEvent event) {
 		if (event.getWorld().isRemote) {
 			return;
 		}
 
-		if (event.getEntity() instanceof EntityPlayer) {
+		Entity entity = event.getEntity();
+
+		if (entity instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.getEntity();
 
 			if (ConfigHandler.enableWelcomeMessage) {
@@ -42,24 +47,36 @@ public class EntityJoinWorld {
 				player.addChatComponentMessage(divider);
 			}
 
-			InventoryPlayer inventory = player.inventory;
-			ItemStack magnetStack = new ItemStack(ModItems.magnetItem);
-			if (!inventory.hasItemStack(magnetStack)) {
-				DatMod.logger.info("Magnet not found, adding to inventory..");
+			if (ConfigHandler.giveMagnet) {
+				if (ConfigHandler.giveMagnetFirstJoinOnly) {
+					Set<String> nbt = entity.getTags();
 
-				boolean itemPlaced = false;
-				int inventorySize = inventory.getSizeInventory();
-
-				for (int i = 0; i < inventorySize; i++) {
-					if (itemPlaced) {
-						continue;
-					}
-
-					if (inventory.getStackInSlot(i) == null) {
-						itemPlaced = true;
-						inventory.setInventorySlotContents(i, magnetStack);
+					if (!nbt.contains("playedBefore")) {
+						return;
 					}
 				}
+
+				InventoryPlayer inventory = player.inventory;
+				ItemStack magnetStack = new ItemStack(ModItems.magnetItem);
+				if (!inventory.hasItemStack(magnetStack)) {
+					DatMod.logger.info("Magnet not found, adding to inventory..");
+
+					boolean itemPlaced = false;
+					int inventorySize = inventory.getSizeInventory();
+
+					for (int i = 0; i < inventorySize; i++) {
+						if (itemPlaced) {
+							continue;
+						}
+
+						if (inventory.getStackInSlot(i) == null) {
+							itemPlaced = true;
+							inventory.setInventorySlotContents(i, magnetStack);
+						}
+					}
+				}
+
+				player.addTag("playedBefore");
 			}
 		}
 	}

@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.creativetab.CreativeTabs;
 /**
  * Created by Acid on 10/26/2016.
  */
-public class GoldiriteIngot extends BaseItem {
-	public GoldiriteIngot() {
+class GoldiriteIngot extends BaseItem {
+	/**
+	 * Constructs the Goldirite Ingot
+	 */
+	GoldiriteIngot() {
 		super("Goldirite Ingot");
 
 		setCreativeTab(CreativeTabs.ingots);

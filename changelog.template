@@ -1,32 +1,15 @@
 # DatMod Changelog
-
-Changelog of **DatMod**.
+Below is a list of changes for each released version of **DatMod**
 
 {{#tags}}
-## {{name}}
  {{#issues}}
-  {{#hasIssue}}
-   {{#hasLink}}
-### {{name}} [{{issue}}]({{link}}) {{title}}
-   {{/hasLink}}
-   {{^hasLink}}
-### {{name}} {{issue}} {{title}}
-   {{/hasLink}}
-  {{/hasIssue}}
-  {{^hasIssue}}
-### {{name}}
-  {{/hasIssue}}
-
   {{#commits}}
-**{{{messageTitle}}}**
-
+####[{{messageTitle}}](https://github.com/xlxacidxlx/DatMod/commit/{{hash}})
 {{#messageBodyItems}}
- * {{.}}
+  {{.}}
 {{/messageBodyItems}}
-
-[{{hash}}](https://github.com/xlxacidxlx/DatMod/commit/{{hash}}) {{authorName}} *{{commitTime}}*
-
+&mdash; by {{authorName}} @ *{{commitTime}}*
   {{/commits}}
-
  {{/issues}}
+
 {{/tags}}

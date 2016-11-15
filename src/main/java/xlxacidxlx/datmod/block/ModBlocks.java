@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import xlxacidxlx.datmod.ConfigHandler;
 
 /**
  * Created by Acid on 10/26/2016.
@@ -18,6 +19,9 @@ public class ModBlocks {
 	public static Ironium ironium;
 	public static IroniumOre ironiumOre;
 
+	/**
+	 * Registers all of the blocks during Forge's FMLPreInitialization event
+	 */
 	public static void preInit() {
 		diamondium = new Diamondium();
 		diamondiumOre = new DiamondiumOre();
@@ -31,30 +35,58 @@ public class ModBlocks {
 		registerBlocks();
 	}
 
-	public static void registerBlock(BaseBlock block) {
+	/**
+	 * Registers the specified block
+	 *
+	 * @param block The block to register
+	 */
+	private static void registerBlock(BaseBlock block) {
 		GameRegistry.register(block);
 		GameRegistry.register(new ItemBlock(block), block.getResourceLocation());
 	}
 
-	public static void registerBlocks() {
-		registerBlock(diamondium);
-		registerBlock(diamondiumOre);
+	/**
+	 * Registers all the blocks in this class
+	 */
+	private static void registerBlocks() {
+		if (!ConfigHandler.enableOreGeneration) {
+			return;
+		}
 
-		registerBlock(emeraldi);
-		registerBlock(emeraldiOre);
+		if (ConfigHandler.enableOreGenerationDiamondium) {
+			registerBlock(diamondium);
+			registerBlock(diamondiumOre);
+		}
 
-		registerBlock(goldirite);
-		registerBlock(goldiriteOre);
+		if (ConfigHandler.enableOreGenerationEmeraldi) {
+			registerBlock(emeraldi);
+			registerBlock(emeraldiOre);
+		}
 
-		registerBlock(ironium);
-		registerBlock(ironiumOre);
+		if (ConfigHandler.enableOreGenerationGoldirite) {
+			registerBlock(goldirite);
+			registerBlock(goldiriteOre);
+		}
+
+		if (ConfigHandler.enableOreGenerationIronium) {
+			registerBlock(ironium);
+			registerBlock(ironiumOre);
+		}
 	}
 
-	public static void registerRender(BaseBlock block) {
+	/**
+	 * Registers the specified block's model
+	 *
+	 * @param block The block to register
+	 */
+	private static void registerRender(BaseBlock block) {
 		Item item = Item.getItemFromBlock(block);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, block.getModelResourceLocation());
 	}
 
+	/**
+	 * Registers all the model registers for the blocks in this class
+	 */
 	public static void registerRenders() {
 		registerRender(diamondium);
 		registerRender(diamondiumOre);

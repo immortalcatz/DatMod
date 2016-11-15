@@ -2,6 +2,7 @@ package xlxacidxlx.datmod.item;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import xlxacidxlx.datmod.ConfigHandler;
 
 /**
  * Created by Acid on 10/26/2016.
@@ -37,6 +38,9 @@ public class ModItems {
 
 	public static Magnet magnetItem;
 
+	/**
+	 * Registers all the mods items
+	 */
 	public static void preInit() {
 		diamondiumAxe = new DiamondiumAxe();
 		diamondiumDust = new DiamondiumDust();
@@ -71,58 +75,99 @@ public class ModItems {
 		registerItems();
 	}
 
-	public static void registerItems() {
-		GameRegistry.register(diamondiumAxe);
-		GameRegistry.register(diamondiumDust);
-		GameRegistry.register(diamondiumIngot);
-		GameRegistry.register(diamondiumPickaxe);
-		GameRegistry.register(diamondiumShovel);
-		GameRegistry.register(diamondiumSword);
+	/**
+	 * Registers the items
+	 */
+	private static void registerItems() {
+		if (ConfigHandler.enableOreGeneration) {
+			if (ConfigHandler.enableOreGenerationDiamondium && ConfigHandler.enableDiamondiumTools) {
+				GameRegistry.register(diamondiumAxe);
+				GameRegistry.register(diamondiumDust);
+				GameRegistry.register(diamondiumIngot);
+				GameRegistry.register(diamondiumPickaxe);
+				GameRegistry.register(diamondiumShovel);
+				GameRegistry.register(diamondiumSword);
+			}
 
-		GameRegistry.register(emeraldiAxe);
-		GameRegistry.register(emeraldiDust);
-		GameRegistry.register(emeraldiIngot);
-		GameRegistry.register(emeraldiPickaxe);
-		GameRegistry.register(emeraldiShovel);
-		GameRegistry.register(emeraldiSword);
+			if (ConfigHandler.enableOreGenerationEmeraldi && ConfigHandler.enableEmeraldiTools) {
+				GameRegistry.register(emeraldiAxe);
+				GameRegistry.register(emeraldiDust);
+				GameRegistry.register(emeraldiIngot);
+				GameRegistry.register(emeraldiPickaxe);
+				GameRegistry.register(emeraldiShovel);
+				GameRegistry.register(emeraldiSword);
+			}
 
-		GameRegistry.register(goldiriteAxe);
-		GameRegistry.register(goldiriteDust);
-		GameRegistry.register(goldiriteIngot);
-		GameRegistry.register(goldiritePickaxe);
-		GameRegistry.register(goldiriteShovel);
-		GameRegistry.register(goldiriteSword);
+			if (ConfigHandler.enableOreGenerationGoldirite && ConfigHandler.enableGoldiriteTools) {
+				GameRegistry.register(goldiriteAxe);
+				GameRegistry.register(goldiriteDust);
+				GameRegistry.register(goldiriteIngot);
+				GameRegistry.register(goldiritePickaxe);
+				GameRegistry.register(goldiriteShovel);
+				GameRegistry.register(goldiriteSword);
+			}
 
-		GameRegistry.register(ironiumAxe);
-		GameRegistry.register(ironiumDust);
-		GameRegistry.register(ironiumIngot);
-		GameRegistry.register(ironiumPickaxe);
-		GameRegistry.register(ironiumShovel);
-		GameRegistry.register(ironiumSword);
+			if (ConfigHandler.enableOreGenerationIronium && ConfigHandler.enableIroniumTools) {
+				GameRegistry.register(ironiumAxe);
+				GameRegistry.register(ironiumDust);
+				GameRegistry.register(ironiumIngot);
+				GameRegistry.register(ironiumPickaxe);
+				GameRegistry.register(ironiumShovel);
+				GameRegistry.register(ironiumSword);
+			}
+		}
 
 		GameRegistry.register(magnetItem);
 	}
 
-	public static void registerRender(BaseItem item) {
+	/**
+	 * Registers the specified item's render
+	 *
+	 * @param item The item to render
+	 */
+	private static void registerRender(BaseItem item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
-	public static void registerRender(BaseItemAxe item) {
+	/**
+	 * Registers the specified item's render
+	 *
+	 * @param item The item to render
+	 */
+	private static void registerRender(BaseItemAxe item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
-	public static void registerRender(BaseItemPickaxe item) {
+	/**
+	 * Registers the specified item's render
+	 *
+	 * @param item The item to render
+	 */
+	private static void registerRender(BaseItemPickaxe item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
-	public static void registerRender(BaseItemShovel item) {
+	/**
+	 * Registers the specified item's render
+	 *
+	 * @param item The item to render
+	 */
+	private static void registerRender(BaseItemShovel item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
-	public static void registerRender(BaseItemSword item) {
+	/**
+	 * Registers the specified item's render
+	 *
+	 * @param item The item to render
+	 */
+	private static void registerRender(BaseItemSword item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
+	/**
+	 * Registers all the item's renders
+	 */
 	public static void registerRenders() {
 		registerRender(diamondiumAxe);
 		registerRender(diamondiumDust);

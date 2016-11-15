@@ -4,6 +4,9 @@ package xlxacidxlx.datmod.block;
  * Created by Acid on 11/1/2016.
  */
 public class Diamondium extends BaseBlock {
+	/**
+	 * Constructs the Diamondium block
+	 */
 	public Diamondium() {
 		super("Diamondium Block");
 

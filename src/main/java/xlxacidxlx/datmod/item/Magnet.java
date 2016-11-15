@@ -21,8 +21,14 @@ import java.util.List;
  * Created by Acid on 10/26/2016.
  */
 public class Magnet extends BaseItem {
-	public static boolean active = false;
+	/**
+	 * Whether the magnet is active or not
+	 */
+	private static boolean active = false;
 
+	/**
+	 * Constructs the Magnet
+	 */
 	public Magnet() {
 		super("Magnet");
 
@@ -37,8 +43,25 @@ public class Magnet extends BaseItem {
 		super.addInformation(stack, playerIn, tooltip, advanced);
 	}
 
-	public static boolean isActive(ItemStack itemStack) {
-		return active;
+	/**
+	 * Checks if the magnet is active or not
+	 *
+	 * @param itemStack The ItemStack to check against
+	 *
+	 * @return boolean
+	 */
+	private static boolean isActive(ItemStack itemStack) {
+		NBTTagCompound tags = itemStack.getTagCompound();
+
+		if (!tags.hasKey("active")) {
+			tags.setBoolean("active", false);
+		}
+
+		if (active && tags.getBoolean("active")) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
@@ -66,10 +89,12 @@ public class Magnet extends BaseItem {
 			if (isActive(itemStackIn)) {
 				message = String.format(message, "deactivated");
 				active = false;
+				itemTagCompound.setBoolean("active", false);
 				itemTagCompound.removeTag("ench");
 			} else {
 				message = String.format(message, "activated");
 				active = true;
+				itemTagCompound.setBoolean("active", true);
 				itemStackIn.addEnchantment(Enchantments.EFFICIENCY, 1);
 			}
 
@@ -82,11 +107,9 @@ public class Magnet extends BaseItem {
 
 	@Override
 	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-
 		if (isActive(stack)) {
 			double radius = ConfigHandler.magnetRadius;
 
-			// TODO: Figure out some way to combine these..
 			List<EntityItem> items = entityIn.worldObj.getEntitiesWithinAABB(EntityItem.class, entityIn.getEntityBoundingBox().expand(radius, radius, radius));
 			List<EntityXPOrb> xps = entityIn.worldObj.getEntitiesWithinAABB(EntityXPOrb.class, entityIn.getEntityBoundingBox().expand(radius, radius, radius));
 
@@ -100,7 +123,13 @@ public class Magnet extends BaseItem {
 		}
 	}
 
-	public static void teleportToPlayer(Entity item, EntityPlayer player) {
+	/**
+	 * Pulls the specified item towards the specified player
+	 *
+	 * @param item   The item to move
+	 * @param player The player to move the item towards
+	 */
+	private static void teleportToPlayer(Entity item, EntityPlayer player) {
 		double x = player.posX;
 		double y = player.posY;
 		double z = player.posZ;

@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.Materials;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class IroniumSword extends BaseItemSword {
-	public IroniumSword() {
+class IroniumSword extends BaseItemSword {
+	/**
+	 * Constructs the Ironium sword
+	 */
+	IroniumSword() {
 		super(Materials.ironium, "Ironium Sword");
 
 		setImplemented(true);

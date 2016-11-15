@@ -11,6 +11,9 @@ public class CreativeTabs {
 	public static Ores ores;
 	public static Tools tools;
 
+	/**
+	 * Registers all of our creative tabs
+	 */
 	public CreativeTabs() {
 		blocks = new Blocks();
 		dusts = new Dusts();

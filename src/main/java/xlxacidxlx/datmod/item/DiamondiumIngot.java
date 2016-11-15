@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.creativetab.CreativeTabs;
 /**
  * Created by Acid on 10/26/2016.
  */
-public class DiamondiumIngot extends BaseItem {
-	public DiamondiumIngot() {
+class DiamondiumIngot extends BaseItem {
+	/**
+	 * Constructs the Diamondium Ingot
+	 */
+	DiamondiumIngot() {
 		super("Diamondium Ingot");
 
 		setCreativeTab(CreativeTabs.ingots);

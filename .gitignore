@@ -2,8 +2,10 @@
 *.ini
 *.hprof
 changelog.template
+CHANGELOG_GENERATED.md
 ## Hehehe >:)
 PLANNED_FEATURES.md
+TOOL_STATISTICS.md
 
 ## General Folders
 build

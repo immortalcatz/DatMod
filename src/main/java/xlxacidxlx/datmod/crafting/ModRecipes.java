@@ -4,6 +4,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import xlxacidxlx.datmod.ConfigHandler;
 import xlxacidxlx.datmod.block.ModBlocks;
 import xlxacidxlx.datmod.item.BaseItem;
 import xlxacidxlx.datmod.item.ModItems;
@@ -12,21 +13,42 @@ import xlxacidxlx.datmod.item.ModItems;
  * Created by Acid on 11/10/2016.
  */
 public class ModRecipes {
+	/**
+	 * Registers all the recipes during Forge's initialization event
+	 */
 	public static void init() {
 		registerRecipes();
 		registerShapelessRecipes();
 		registerSmeltingRecipes();
 	}
 
+	/**
+	 * Registers the specified recipe
+	 *
+	 * @param output    The item to receive from crafting
+	 * @param lineOne   The first line's recipe
+	 * @param lineTwo   The second line's recipe
+	 * @param lineThree The third line's recipe
+	 * @param input     Items that go into crafting the item
+	 */
 	public static void registerRecipe(ItemStack output, String lineOne, String lineTwo, String lineThree, ItemStack input) {
 		GameRegistry.addRecipe(output, lineOne, lineTwo, lineThree, input);
 	}
 
+	/**
+	 * Registers the specified recipe
+	 *
+	 * @param output The item to get from crafting
+	 * @param params An object of crafting lines and ingredients
+	 */
 	public static void registerRecipe(ItemStack output, Object... params) {
 		GameRegistry.addRecipe(output, params);
 	}
 
-	public static void registerRecipes() {
+	/**
+	 * Registers the recipes
+	 */
+	private static void registerRecipes() {
 		BaseItem diamondiumIngot = ModItems.diamondiumIngot;
 		BaseItem emeraldiIngot = ModItems.emeraldiIngot;
 		BaseItem goldiriteIngot = ModItems.goldiriteIngot;
@@ -191,19 +213,37 @@ public class ModRecipes {
 		});
 	}
 
+	/**
+	 * Registers a shapeless recipe
+	 *
+	 * @param output The item to receive from crafting
+	 * @param input  The item to put in for crafting
+	 */
 	public static void registerShapelessRecipe(ItemStack output, ItemStack input) {
 		GameRegistry.addShapelessRecipe(output, input);
 	}
 
-	public static void registerShapelessRecipes() {
+	/**
+	 * Registers all shapeless recipes
+	 */
+	private static void registerShapelessRecipes() {
 	}
 
-	public static void registerSmeltingRecipe(ItemStack input, ItemStack output, float xp) {
+	/**
+	 * Registers a smelting recipe
+	 *
+	 * @param input  The item to put in to smelt
+	 * @param output The item received from smelting
+	 * @param xp     The amount of XP gained from smelting the item
+	 */
+	private static void registerSmeltingRecipe(ItemStack input, ItemStack output, float xp) {
 		GameRegistry.addSmelting(input, output, xp);
 	}
 
-	public static void registerSmeltingRecipes() {
-		// TODO: These values may need to be adjusted a little..
+	/**
+	 * Registers all smelting recipes
+	 */
+	private static void registerSmeltingRecipes() {
 		float xp = 0.5f;
 		float xpDiamondium = 1.5f;
 		float xpEmeraldi = 0.8f;
@@ -216,7 +256,9 @@ public class ModRecipes {
 		registerSmeltingRecipe(new ItemStack(ModBlocks.goldiriteOre), new ItemStack(ModItems.goldiriteIngot), xpGoldirite);
 		registerSmeltingRecipe(new ItemStack(ModBlocks.ironiumOre), new ItemStack(ModItems.ironiumIngot), xpIronium);
 
-		// Rotten flesh -> leather
-		registerSmeltingRecipe(new ItemStack(Items.ROTTEN_FLESH), new ItemStack(Items.LEATHER), xpLeather);
+		if (ConfigHandler.enableRottenFleshToLeatherRecipe) {
+			// Rotten flesh -> leather
+			registerSmeltingRecipe(new ItemStack(Items.ROTTEN_FLESH), new ItemStack(Items.LEATHER), xpLeather);
+		}
 	}
 }

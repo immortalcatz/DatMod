@@ -5,8 +5,11 @@ import xlxacidxlx.datmod.Materials;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class EmeraldiPickaxe extends BaseItemPickaxe {
-	public EmeraldiPickaxe() {
+class EmeraldiPickaxe extends BaseItemPickaxe {
+	/**
+	 * Constructs the Emeraldi Pickaxe
+	 */
+	EmeraldiPickaxe() {
 		super(Materials.emeraldi, "Emeraldi Pickaxe");
 
 		setImplemented(true);

@@ -12,10 +12,16 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class BaseItemShovel extends ItemSpade {
-	public boolean implemented = false;
+class BaseItemShovel extends ItemSpade {
+	private boolean implemented = false;
 
-	public BaseItemShovel(ToolMaterial material, String name) {
+	/**
+	 * Constructs the BaseItemShovel
+	 *
+	 * @param material The material the shovel is made of
+	 * @param name     The name of the shovel
+	 */
+	BaseItemShovel(ToolMaterial material, String name) {
 		super(material);
 
 		setCreativeTab(CreativeTabs.tools);
@@ -34,14 +40,29 @@ public class BaseItemShovel extends ItemSpade {
 		super.addInformation(stack, playerIn, tooltip, advanced);
 	}
 
-	public ModelResourceLocation getModelResourceLocation() {
+	/**
+	 * Gets the items model location
+	 *
+	 * @return ModelResourceLocation
+	 */
+	ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 
-	public boolean isImplemented() {
+	/**
+	 * Checks if the item is set as implemented
+	 *
+	 * @return boolean
+	 */
+	private boolean isImplemented() {
 		return this.implemented;
 	}
 
+	/**
+	 * Sets if the item is implemented
+	 *
+	 * @param implemented True/false
+	 */
 	public void setImplemented(boolean implemented) {
 		this.implemented = implemented;
 	}
