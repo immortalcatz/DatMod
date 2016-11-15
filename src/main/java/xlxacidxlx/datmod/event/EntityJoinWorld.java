@@ -3,9 +3,14 @@ package xlxacidxlx.datmod.event;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import xlxacidxlx.datmod.ConfigHandler;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.item.ModItems;
 
@@ -21,7 +26,21 @@ public class EntityJoinWorld {
 
 		if (event.getEntity() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.getEntity();
-			player.addChatComponentMessage(new TextComponentString("Thanks for trying out DatMod, " + player.getDisplayNameString() + "!"));
+
+			if (ConfigHandler.enableWelcomeMessage) {
+				Style chatStyle = new Style().setBold(true).setColor(TextFormatting.GOLD);
+				Style dividerStyle = new Style().setColor(TextFormatting.DARK_BLUE);
+				Style githubStyle = new Style().setColor(TextFormatting.DARK_GRAY);
+
+				ITextComponent divider = new TextComponentString("============================").setStyle(dividerStyle);
+				ITextComponent message = new TextComponentString("Thanks for trying out " + DatMod.NAME + ", " + player.getDisplayNameString()).setStyle(chatStyle);
+				ITextComponent githubMessage = ForgeHooks.newChatWithLinks("Be sure to report issues at our GitHub: http://github.com/xlxacidxlx/DatMod/").setStyle(githubStyle);
+
+				player.addChatComponentMessage(divider);
+				player.addChatComponentMessage(message);
+				player.addChatComponentMessage(githubMessage);
+				player.addChatComponentMessage(divider);
+			}
 
 			InventoryPlayer inventory = player.inventory;
 			ItemStack magnetStack = new ItemStack(ModItems.magnetItem);

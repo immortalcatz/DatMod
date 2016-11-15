@@ -196,7 +196,6 @@ public class ModRecipes {
 	}
 
 	public static void registerShapelessRecipes() {
-		//
 	}
 
 	public static void registerSmeltingRecipe(ItemStack input, ItemStack output, float xp) {
@@ -217,7 +216,7 @@ public class ModRecipes {
 		registerSmeltingRecipe(new ItemStack(ModBlocks.goldiriteOre), new ItemStack(ModItems.goldiriteIngot), xpGoldirite);
 		registerSmeltingRecipe(new ItemStack(ModBlocks.ironiumOre), new ItemStack(ModItems.ironiumIngot), xpIronium);
 
-		// Rotten flesh -> leather (test smelting recipe)
+		// Rotten flesh -> leather
 		registerSmeltingRecipe(new ItemStack(Items.ROTTEN_FLESH), new ItemStack(Items.LEATHER), xpLeather);
 	}
 }

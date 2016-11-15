@@ -14,6 +14,7 @@ public class ConfigHandler {
 
 	// General Settings
 	public static boolean enableMod;
+	public static boolean enableWelcomeMessage;
 	public static boolean debugMode;
 
 	// Feature Settings
@@ -37,6 +38,7 @@ public class ConfigHandler {
 		config.addCustomCategoryComment(category, "Settings that don't really fit anywhere else.");
 		debugMode = config.getBoolean("debugMode", category, false, "Toggles debug mode");
 		enableMod = config.getBoolean("enableMod", category, true, "Toggles the mod");
+		enableWelcomeMessage = config.getBoolean("enableWelcomeMessage", category, true, "Toggles showing a welcome message on world join");
 
 		category = "Features";
 		config.addCustomCategoryComment(category, "Settings related to the mods features");

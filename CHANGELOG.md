@@ -1,6 +1,15 @@
 # Changelog
 The following is a list of changes in each release of the mod.
 
+### 0.0.3 - Cleverly Titled Update
+This update has a few minor code improvements. It's not a required update as no bugs were fixed, but I would recommend it if you want to stay current.
+
+### Changes
+- Adds ore generation to The End and The Nether. Please note if generation seems lacking in the Overworld, it'll be the same in The End and Nether as the generation code is exactly the same.
+- Removed some debug code as it's no longer needed
+- Work on #12 
+- Fixes #10 - Gives the "welcome" message some color and flair. Also adds a configuration option to disable the message if you find it annoying.
+
 ### 0.0.2 - The Fix Update
 This update just fixes a few of the bugs/issues I found after initially releasing the mod. No breaking changes are present in this build.
 
