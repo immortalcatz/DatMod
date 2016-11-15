@@ -5,6 +5,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+/**
+ * Created by Acid on 10/26/2016.
+ */
 public class ModBlocks {
 	public static Diamondium diamondium;
 	public static DiamondiumOre diamondiumOre;

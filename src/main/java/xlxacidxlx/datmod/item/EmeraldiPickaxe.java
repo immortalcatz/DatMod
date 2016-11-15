@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class EmeraldiPickaxe extends BaseItemPickaxe {
 	public EmeraldiPickaxe() {
 		super(Materials.emeraldi, "Emeraldi Pickaxe");
+
+		setImplemented(true);
 	}
 }

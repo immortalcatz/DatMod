@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class EmeraldiSword extends BaseItemSword {
 	public EmeraldiSword() {
 		super(Materials.emeraldi, "Emeraldi Sword");
+
+		setImplemented(true);
 	}
 }

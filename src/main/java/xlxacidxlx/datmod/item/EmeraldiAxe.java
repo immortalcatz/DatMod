@@ -9,5 +9,7 @@ public class EmeraldiAxe extends BaseItemAxe {
 	protected EmeraldiAxe() {
 		super(Materials.emeraldi, "Emeraldi Axe", Materials.emeraldi.getDamageVsEntity(), Materials.emeraldi.getEfficiencyOnProperMaterial());
 		// TODO: Properly set damage and speed
+
+		setImplemented(true);
 	}
 }

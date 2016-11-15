@@ -2,7 +2,7 @@
 A mod of miscellaneous bits & bobs, gadgets & gizmos.
 
 ### Current Version
-The current version of **DatMod** is v*0.0.1*, released *November 14th, 2016*.
+The current version of **DatMod** is v*0.0.2*, released *November 14th, 2016*.
 
 ### Features
 See [this file](./FEATURES.md) for full feature list.

@@ -3,6 +3,9 @@ package xlxacidxlx.datmod.block;
 import net.minecraft.block.material.Material;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
+/**
+ * Created by Acid on 10/28/2016.
+ */
 public class BaseBlockOre extends BaseBlock {
 	public BaseBlockOre(Material material, String name) {
 		super(material, name);

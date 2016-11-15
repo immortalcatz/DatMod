@@ -9,6 +9,9 @@ import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
 import java.util.List;
 
+/**
+ * Created by Acid on 11/1/2016.
+ */
 public class BaseItemPickaxe extends ItemPickaxe {
 	public boolean implemented = false;
 
@@ -37,5 +40,9 @@ public class BaseItemPickaxe extends ItemPickaxe {
 
 	public boolean isImplemented() {
 		return this.implemented;
+	}
+
+	public void setImplemented(boolean implemented) {
+		this.implemented = implemented;
 	}
 }

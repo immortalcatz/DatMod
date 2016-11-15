@@ -12,6 +12,10 @@ import xlxacidxlx.datmod.block.ModBlocks;
 import java.util.Random;
 
 // TODO: The values for ore generation may need to be tinkered with..
+
+/**
+ * Created by Acid on 11/2/2016.
+ */
 public class OreGenerator implements IWorldGenerator {
 	// Diamondium Settings
 	private int oreDiamondiumChance = 2;

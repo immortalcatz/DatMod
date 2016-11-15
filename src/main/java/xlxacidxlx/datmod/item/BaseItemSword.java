@@ -41,4 +41,8 @@ public class BaseItemSword extends ItemSword {
 	public boolean isImplemented() {
 		return this.implemented;
 	}
+
+	public void setImplemented(boolean implemented) {
+		this.implemented = implemented;
+	}
 }

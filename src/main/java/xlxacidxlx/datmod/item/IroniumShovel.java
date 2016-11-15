@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class IroniumShovel extends BaseItemShovel {
 	public IroniumShovel() {
 		super(Materials.ironium, "Ironium Shovel");
+
+		setImplemented(true);
 	}
 }

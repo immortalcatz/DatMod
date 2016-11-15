@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class EmeraldiShovel extends BaseItemShovel {
 	public EmeraldiShovel() {
 		super(Materials.emeraldi, "Emeraldi Shovel");
+
+		setImplemented(true);
 	}
 }

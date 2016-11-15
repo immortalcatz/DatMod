@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class GoldiriteShovel extends BaseItemShovel {
 	public GoldiriteShovel() {
 		super(Materials.goldirite, "Goldirite Shovel");
+
+		setImplemented(true);
 	}
 }

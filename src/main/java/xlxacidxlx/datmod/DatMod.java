@@ -15,10 +15,13 @@ import xlxacidxlx.datmod.proxy.CommonProxy;
 
 import java.io.File;
 
+/**
+ * Created by Acid on 10/20/2016.
+ */
 @Mod(modid = DatMod.MODID, version = DatMod.VERSION, name = DatMod.NAME, updateJSON = "http://raw.githubusercontent.com/xlxAciDxlx/DatMod/VERSION.md")
 public class DatMod {
 	public static final String MODID = "datmod";
-	public static final String VERSION = "0.0.1";
+	public static final String VERSION = "0.0.2";
 	public static final String NAME = "DatMod";
 
 	@SidedProxy(clientSide = "xlxacidxlx.datmod.proxy.ClientProxy", serverSide = "xlxacidxlx.datmod.proxy.CommonProxy")

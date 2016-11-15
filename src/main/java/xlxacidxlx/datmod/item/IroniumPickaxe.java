@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class IroniumPickaxe extends BaseItemPickaxe {
 	public IroniumPickaxe() {
 		super(Materials.ironium, "Ironium Pickaxe");
+
+		setImplemented(true);
 	}
 }

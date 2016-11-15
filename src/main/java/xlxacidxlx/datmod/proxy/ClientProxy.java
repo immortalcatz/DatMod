@@ -12,6 +12,9 @@ import xlxacidxlx.datmod.block.ModBlocks;
 import xlxacidxlx.datmod.item.BaseItem;
 import xlxacidxlx.datmod.item.ModItems;
 
+/**
+ * Created by Acid on 10/26/2016.
+ */
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
 	@Override

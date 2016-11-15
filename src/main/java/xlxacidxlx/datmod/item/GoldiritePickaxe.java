@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class GoldiritePickaxe extends BaseItemPickaxe {
 	public GoldiritePickaxe() {
 		super(Materials.goldirite, "Goldirite Pickaxe");
+
+		setImplemented(true);
 	}
 }

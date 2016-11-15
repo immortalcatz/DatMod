@@ -3,6 +3,9 @@ package xlxacidxlx.datmod.item;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+/**
+ * Created by Acid on 10/26/2016.
+ */
 public class ModItems {
 	public static DiamondiumAxe diamondiumAxe;
 	public static DiamondiumDust diamondiumDust;

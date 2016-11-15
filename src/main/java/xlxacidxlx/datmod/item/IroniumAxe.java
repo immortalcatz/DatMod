@@ -9,5 +9,7 @@ public class IroniumAxe extends BaseItemAxe {
 	protected IroniumAxe() {
 		super(Materials.ironium, "Ironium Axe", Materials.ironium.getDamageVsEntity(), Materials.ironium.getEfficiencyOnProperMaterial());
 		// TODO: Properly set damage and speed
+
+		setImplemented(true);
 	}
 }

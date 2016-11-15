@@ -7,6 +7,10 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 
 // TODO: Figure out how to setup sub commands
+
+/**
+ * Created by Acid on 11/6/2016.
+ */
 public class DatMod extends CommandBase {
 	@Override
 	public String getCommandName() {

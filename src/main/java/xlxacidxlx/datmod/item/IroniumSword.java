@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class IroniumSword extends BaseItemSword {
 	public IroniumSword() {
 		super(Materials.ironium, "Ironium Sword");
+
+		setImplemented(true);
 	}
 }

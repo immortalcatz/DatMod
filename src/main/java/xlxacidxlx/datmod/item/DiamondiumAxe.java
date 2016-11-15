@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class DiamondiumAxe extends BaseItemAxe {
 	protected DiamondiumAxe() {
 		super(Materials.diamondium, "Diamondium Axe", Materials.diamondium.getDamageVsEntity(), Materials.diamondium.getEfficiencyOnProperMaterial());
+
+		setImplemented(true);
 	}
 }

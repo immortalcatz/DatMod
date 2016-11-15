@@ -8,5 +8,7 @@ import xlxacidxlx.datmod.Materials;
 public class GoldiriteSword extends BaseItemSword {
 	public GoldiriteSword() {
 		super(Materials.goldirite, "Goldirite Sword");
+
+		setImplemented(true);
 	}
 }

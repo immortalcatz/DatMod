@@ -17,6 +17,9 @@ import xlxacidxlx.datmod.DatMod;
 
 import java.util.List;
 
+/**
+ * Created by Acid on 10/26/2016.
+ */
 public class Magnet extends BaseItem {
 	public static boolean active = false;
 

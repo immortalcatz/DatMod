@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
@@ -12,7 +14,14 @@ import net.minecraft.world.IBlockAccess;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
+import java.util.List;
+
+/**
+ * Created by Acid on 10/26/2016.
+ */
 public class BaseBlock extends Block {
+	public boolean implemented = false;
+
 	public BaseBlock(Material materialIn, String name) {
 		super(materialIn);
 
@@ -44,9 +53,17 @@ public class BaseBlock extends Block {
 	}
 
 	@Override
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
+		if (!isImplemented()) {
+			tooltip.add("[Not implemented!]");
+		}
+
+		super.addInformation(stack, playerIn, tooltip, advanced);
+	}
+
+	@Override
 	public boolean canDropFromExplosion(Explosion explosion) {
-		// TODO: Possibly change this for certain blocks..
-		return false;
+		return false; // TODO: Possibly change this for certain blocks..
 	}
 
 	public ModelResourceLocation getModelResourceLocation() {
@@ -60,5 +77,13 @@ public class BaseBlock extends Block {
 	@Override
 	public boolean isFlammable(IBlockAccess world, BlockPos pos, EnumFacing face) {
 		return false;
+	}
+
+	public boolean isImplemented() {
+		return this.implemented;
+	}
+
+	public void setImplemented(boolean implemented) {
+		this.implemented = implemented;
 	}
 }

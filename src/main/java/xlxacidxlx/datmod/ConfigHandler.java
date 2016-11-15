@@ -4,6 +4,9 @@ import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
 
+/**
+ * Created by Acid on 10/26/2016.
+ */
 public class ConfigHandler {
 	// TODO: Work on this
 

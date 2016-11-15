@@ -9,5 +9,7 @@ public class GoldiriteAxe extends BaseItemAxe {
 	protected GoldiriteAxe() {
 		super(Materials.goldirite, "Goldirite Axe", Materials.goldirite.getDamageVsEntity(), Materials.goldirite.getEfficiencyOnProperMaterial());
 		// TODO: Properly set damage and speed
+
+		setImplemented(true);
 	}
 }
