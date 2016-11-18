@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemShovel;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class IroniumShovel extends BaseItemShovel {
+public class IroniumShovel extends ItemShovel {
 	/**
 	 * Constructs the Ironium Shovel
 	 */
-	IroniumShovel() {
+	public IroniumShovel() {
 		super(Materials.ironium, "Ironium Shovel");
 
 		setImplemented(true);

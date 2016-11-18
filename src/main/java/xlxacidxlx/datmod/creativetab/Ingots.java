@@ -1,8 +1,8 @@
 package xlxacidxlx.datmod.creativetab;
 
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import xlxacidxlx.datmod.DatMod;
+import xlxacidxlx.datmod.register.Items;
 
 /**
  * Created by Acid on 10/26/2016.
@@ -17,6 +17,6 @@ public class Ingots extends net.minecraft.creativetab.CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return Items.DIAMOND;
+		return Items.diamondiumIngot;
 	}
 }

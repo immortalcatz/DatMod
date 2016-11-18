@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemSword;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class IroniumSword extends BaseItemSword {
+public class IroniumSword extends ItemSword {
 	/**
 	 * Constructs the Ironium sword
 	 */
-	IroniumSword() {
+	public IroniumSword() {
 		super(Materials.ironium, "Ironium Sword");
 
 		setImplemented(true);

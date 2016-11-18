@@ -6,9 +6,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import xlxacidxlx.datmod.block.ModBlocks;
-import xlxacidxlx.datmod.item.BaseItem;
-import xlxacidxlx.datmod.item.ModItems;
+import xlxacidxlx.datmod.base.Item;
+import xlxacidxlx.datmod.register.Blocks;
+import xlxacidxlx.datmod.register.Items;
 
 /**
  * Created by Acid on 10/26/2016.
@@ -23,8 +23,8 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		ModItems.registerRenders();
-		ModBlocks.registerRenders();
+		Items.registerRenders();
+		Blocks.registerRenders();
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class ClientProxy extends CommonProxy {
 	 *
 	 * @param item The item to register
 	 */
-	public void registerModel(BaseItem item) {
+	public void registerModel(Item item) {
 		ModelLoader.setCustomModelResourceLocation(item, 0, item.getModelResourceLocation());
 	}
 }

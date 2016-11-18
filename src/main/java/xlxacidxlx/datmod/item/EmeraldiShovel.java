@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemShovel;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class EmeraldiShovel extends BaseItemShovel {
+public class EmeraldiShovel extends ItemShovel {
 	/**
 	 * Constructs the Emeraldi Shovel
 	 */
-	EmeraldiShovel() {
+	public EmeraldiShovel() {
 		super(Materials.emeraldi, "Emeraldi Shovel");
 
 		setImplemented(true);

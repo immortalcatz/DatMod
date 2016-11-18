@@ -1,6 +1,5 @@
-package xlxacidxlx.datmod.block;
+package xlxacidxlx.datmod.base;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -19,7 +18,7 @@ import java.util.List;
 /**
  * Created by Acid on 10/26/2016.
  */
-class BaseBlock extends Block {
+public class Block extends net.minecraft.block.Block {
 	private boolean implemented = false;
 
 	/**
@@ -28,7 +27,7 @@ class BaseBlock extends Block {
 	 * @param materialIn The type of material the block is made of
 	 * @param name       The name of the block
 	 */
-	BaseBlock(Material materialIn, String name) {
+	Block(Material materialIn, String name) {
 		super(materialIn);
 
 		setCreativeTab(CreativeTabs.blocks);
@@ -48,7 +47,7 @@ class BaseBlock extends Block {
 	 *
 	 * @param name The name of the block
 	 */
-	BaseBlock(String name) {
+	protected Block(String name) {
 		super(Material.ROCK);
 
 		setCreativeTab(CreativeTabs.blocks);
@@ -80,14 +79,14 @@ class BaseBlock extends Block {
 	/**
 	 * Returns the model's resource location
 	 */
-	ModelResourceLocation getModelResourceLocation() {
+	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 
 	/**
 	 * Gets the block's resource location
 	 */
-	ResourceLocation getResourceLocation() {
+	public ResourceLocation getResourceLocation() {
 		return getRegistryName();
 	}
 

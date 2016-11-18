@@ -1,6 +1,5 @@
 package xlxacidxlx.datmod.creativetab;
 
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import xlxacidxlx.datmod.DatMod;
 
@@ -17,6 +16,6 @@ public class Tools extends net.minecraft.creativetab.CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return Items.DIAMOND_SWORD;
+		return xlxacidxlx.datmod.register.Items.diamondiumSword;
 	}
 }

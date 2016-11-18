@@ -13,14 +13,14 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import xlxacidxlx.datmod.ConfigHandler;
 import xlxacidxlx.datmod.DatMod;
-import xlxacidxlx.datmod.item.ModItems;
+import xlxacidxlx.datmod.register.Items;
 
 import java.util.Set;
 
 /**
  * Created by Acid on 10/26/2016.
  */
-class EntityJoinWorld {
+public class EntityJoinWorld {
 	@SubscribeEvent
 	public void entityJoinWorld(EntityJoinWorldEvent event) {
 		if (event.getWorld().isRemote) {
@@ -57,7 +57,7 @@ class EntityJoinWorld {
 				}
 
 				InventoryPlayer inventory = player.inventory;
-				ItemStack magnetStack = new ItemStack(ModItems.magnetItem);
+				ItemStack magnetStack = new ItemStack(Items.magnetItem);
 				if (!inventory.hasItemStack(magnetStack)) {
 					DatMod.logger.info("Magnet not found, adding to inventory..");
 

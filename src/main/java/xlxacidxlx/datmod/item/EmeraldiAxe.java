@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemAxe;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class EmeraldiAxe extends BaseItemAxe {
+public class EmeraldiAxe extends ItemAxe {
 	/**
 	 * Constructs the Emeraldi Axe
 	 */
-	EmeraldiAxe() {
+	public EmeraldiAxe() {
 		super(Materials.emeraldi, "Emeraldi Axe", Materials.emeraldi.getDamageVsEntity(), Materials.emeraldi.getEfficiencyOnProperMaterial());
 
 		setImplemented(true);

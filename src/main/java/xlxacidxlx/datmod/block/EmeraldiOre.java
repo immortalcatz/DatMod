@@ -1,13 +1,15 @@
 package xlxacidxlx.datmod.block;
 
+import xlxacidxlx.datmod.base.BlockOre;
+
 /**
  * Created by Acid on 11/2/2016.
  */
-class EmeraldiOre extends BaseBlockOre {
+public class EmeraldiOre extends BlockOre {
 	/**
 	 * Constructs the Emeraldi Ore
 	 */
-	EmeraldiOre() {
+	public EmeraldiOre() {
 		super("Emeraldi Ore");
 
 		setImplemented(true);

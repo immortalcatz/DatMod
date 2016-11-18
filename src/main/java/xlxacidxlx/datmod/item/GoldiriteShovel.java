@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemShovel;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class GoldiriteShovel extends BaseItemShovel {
+public class GoldiriteShovel extends ItemShovel {
 	/**
 	 * Constructs the Goldirite Shovel
 	 */
-	GoldiriteShovel() {
+	public GoldiriteShovel() {
 		super(Materials.goldirite, "Goldirite Shovel");
 
 		setImplemented(true);

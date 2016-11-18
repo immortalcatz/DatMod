@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemPickaxe;
 
 /**
  * Created by Acid on 10/26/2016.
  */
-class DiamondiumPickaxe extends BaseItemPickaxe {
+public class DiamondiumPickaxe extends ItemPickaxe {
 	/**
 	 * Constructs the Diamondium Pickaxe
 	 */
-	DiamondiumPickaxe() {
+	public DiamondiumPickaxe() {
 		super(Materials.diamondium, "Diamondium Pickaxe");
 
 		setImplemented(true);

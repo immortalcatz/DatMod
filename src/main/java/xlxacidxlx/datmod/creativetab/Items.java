@@ -16,6 +16,6 @@ public class Items extends net.minecraft.creativetab.CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return net.minecraft.init.Items.ITEM_FRAME;
+		return xlxacidxlx.datmod.register.Items.magnetItem;
 	}
 }

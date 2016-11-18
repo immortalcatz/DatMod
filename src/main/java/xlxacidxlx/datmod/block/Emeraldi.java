@@ -1,9 +1,11 @@
 package xlxacidxlx.datmod.block;
 
+import xlxacidxlx.datmod.base.Block;
+
 /**
  * Created by Acid on 11/28/2016.
  */
-public class Emeraldi extends BaseBlock {
+public class Emeraldi extends Block {
 	/**
 	 * Constructs the Emeraldi block
 	 */

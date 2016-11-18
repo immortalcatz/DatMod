@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemPickaxe;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class EmeraldiPickaxe extends BaseItemPickaxe {
+public class EmeraldiPickaxe extends ItemPickaxe {
 	/**
 	 * Constructs the Emeraldi Pickaxe
 	 */
-	EmeraldiPickaxe() {
+	public EmeraldiPickaxe() {
 		super(Materials.emeraldi, "Emeraldi Pickaxe");
 
 		setImplemented(true);

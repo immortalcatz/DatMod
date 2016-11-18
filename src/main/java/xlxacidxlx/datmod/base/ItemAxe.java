@@ -1,9 +1,10 @@
-package xlxacidxlx.datmod.item;
+package xlxacidxlx.datmod.base;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-class BaseItemAxe extends ItemAxe {
+public class ItemAxe extends net.minecraft.item.ItemAxe {
 	private boolean implemented = false;
 
 	/**
@@ -23,7 +24,7 @@ class BaseItemAxe extends ItemAxe {
 	 * @param damage   The amount of damage the axe has
 	 * @param speed    How fast the axe is
 	 */
-	BaseItemAxe(ToolMaterial material, String name, float damage, float speed) {
+	public ItemAxe(ToolMaterial material, String name, float damage, float speed) {
 		super(material, damage, speed);
 
 		setCreativeTab(CreativeTabs.tools);
@@ -34,6 +35,7 @@ class BaseItemAxe extends ItemAxe {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 		if (!isImplemented()) {
 			tooltip.add("[Not implemented!]");
@@ -47,7 +49,7 @@ class BaseItemAxe extends ItemAxe {
 	 *
 	 * @return ModelResourceLocation
 	 */
-	ModelResourceLocation getModelResourceLocation() {
+	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 

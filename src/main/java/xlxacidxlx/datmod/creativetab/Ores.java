@@ -16,6 +16,6 @@ public class Ores extends net.minecraft.creativetab.CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return Item.getItemFromBlock(net.minecraft.init.Blocks.DIAMOND_ORE);
+		return Item.getItemFromBlock(xlxacidxlx.datmod.register.Blocks.diamondiumOre);
 	}
 }

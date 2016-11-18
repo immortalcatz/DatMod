@@ -1,13 +1,15 @@
 package xlxacidxlx.datmod.block;
 
+import xlxacidxlx.datmod.base.BlockOre;
+
 /**
  * Created by Acid on 10/26/2016.
  */
-class IroniumOre extends BaseBlockOre {
+public class IroniumOre extends BlockOre {
 	/**
 	 * Constructs the Ironium Ore
 	 */
-	IroniumOre() {
+	public IroniumOre() {
 		super("Ironium Ore");
 
 		setImplemented(true);

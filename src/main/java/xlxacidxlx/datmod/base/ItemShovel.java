@@ -1,8 +1,11 @@
-package xlxacidxlx.datmod.item;
+package xlxacidxlx.datmod.base;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
@@ -11,16 +14,19 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-public class BaseItem extends net.minecraft.item.Item {
+public class ItemShovel extends ItemSpade {
 	private boolean implemented = false;
 
 	/**
-	 * Constructs the BaseItem
+	 * Constructs the BaseItemShovel
 	 *
-	 * @param name The name of the item
+	 * @param material The material the shovel is made of
+	 * @param name     The name of the shovel
 	 */
-	public BaseItem(String name) {
-		setCreativeTab(CreativeTabs.items);
+	public ItemShovel(ToolMaterial material, String name) {
+		super(material);
+
+		setCreativeTab(CreativeTabs.tools);
 
 		name = name.toLowerCase().replace(" ", "");
 		setRegistryName(DatMod.MODID, name);
@@ -28,6 +34,7 @@ public class BaseItem extends net.minecraft.item.Item {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 		if (!isImplemented()) {
 			tooltip.add("[Not implemented!]");
@@ -43,15 +50,6 @@ public class BaseItem extends net.minecraft.item.Item {
 	 */
 	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
-	}
-
-	/**
-	 * Gets the item's name
-	 *
-	 * @return String
-	 */
-	public String getName() {
-		return this.toString().toLowerCase();
 	}
 
 	/**

@@ -1,9 +1,10 @@
-package xlxacidxlx.datmod.item;
+package xlxacidxlx.datmod.base;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-class BaseItemSword extends ItemSword {
+public class ItemSword extends net.minecraft.item.ItemSword {
 	private boolean implemented = false;
 
 	/**
@@ -21,7 +22,7 @@ class BaseItemSword extends ItemSword {
 	 * @param material The material the sword is made of
 	 * @param name     The name of the sword
 	 */
-	BaseItemSword(ToolMaterial material, String name) {
+	public ItemSword(ToolMaterial material, String name) {
 		super(material);
 
 		setCreativeTab(CreativeTabs.tools);
@@ -32,6 +33,7 @@ class BaseItemSword extends ItemSword {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 		if (!isImplemented()) {
 			tooltip.add("[Not implemented!]");
@@ -45,7 +47,7 @@ class BaseItemSword extends ItemSword {
 	 *
 	 * @return ModelResourceLocation
 	 */
-	ModelResourceLocation getModelResourceLocation() {
+	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 

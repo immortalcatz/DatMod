@@ -1,9 +1,10 @@
-package xlxacidxlx.datmod.item;
+package xlxacidxlx.datmod.base;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
@@ -12,16 +13,16 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-class BaseItemShovel extends ItemSpade {
+public class ItemPickaxe extends net.minecraft.item.ItemPickaxe {
 	private boolean implemented = false;
 
 	/**
-	 * Constructs the BaseItemShovel
+	 * Constructs the BaseItemPickaxe
 	 *
-	 * @param material The material the shovel is made of
-	 * @param name     The name of the shovel
+	 * @param material The material the pickaxe is made of
+	 * @param name     The name of the pickaxe
 	 */
-	BaseItemShovel(ToolMaterial material, String name) {
+	public ItemPickaxe(ToolMaterial material, String name) {
 		super(material);
 
 		setCreativeTab(CreativeTabs.tools);
@@ -32,6 +33,7 @@ class BaseItemShovel extends ItemSpade {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 		if (!isImplemented()) {
 			tooltip.add("[Not implemented!]");
@@ -45,7 +47,7 @@ class BaseItemShovel extends ItemSpade {
 	 *
 	 * @return ModelResourceLocation
 	 */
-	ModelResourceLocation getModelResourceLocation() {
+	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
 	}
 

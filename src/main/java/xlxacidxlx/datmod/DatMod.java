@@ -7,11 +7,11 @@ import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import xlxacidxlx.datmod.block.ModBlocks;
-import xlxacidxlx.datmod.crafting.ModRecipes;
-import xlxacidxlx.datmod.event.ModEvents;
-import xlxacidxlx.datmod.item.ModItems;
 import xlxacidxlx.datmod.proxy.CommonProxy;
+import xlxacidxlx.datmod.register.Blocks;
+import xlxacidxlx.datmod.register.Events;
+import xlxacidxlx.datmod.register.Items;
+import xlxacidxlx.datmod.register.Recipes;
 
 import java.io.File;
 
@@ -21,7 +21,7 @@ import java.io.File;
 @Mod(modid = DatMod.MODID, version = DatMod.VERSION, name = DatMod.NAME, updateJSON = "http://raw.githubusercontent.com/xlxAciDxlx/DatMod/VERSION.md")
 public class DatMod {
 	public static final String MODID = "datmod";
-	public static final String VERSION = "1.0.0";
+	public static final String VERSION = "1.1.0";
 	public static final String NAME = "DatMod";
 
 	@SidedProxy(clientSide = "xlxacidxlx.datmod.proxy.ClientProxy", serverSide = "xlxacidxlx.datmod.proxy.CommonProxy")
@@ -42,8 +42,8 @@ public class DatMod {
 		creativeTabs = new xlxacidxlx.datmod.creativetab.CreativeTabs();
 
 		proxy.preInit(event);
-		ModItems.preInit();
-		ModBlocks.preInit();
+		Items.preInit();
+		Blocks.preInit();
 
 		logger.info("PreInitialization completed!");
 	}
@@ -51,7 +51,7 @@ public class DatMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
-		ModRecipes.init();
+		Recipes.init();
 		GameRegistry.registerWorldGenerator(new OreGenerator(), 1);
 
 		logger.info("Initialization completed!");
@@ -65,7 +65,7 @@ public class DatMod {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
-		ModEvents.postInit();
+		Events.postInit();
 
 		logger.info("PostInitialization completed!");
 	}

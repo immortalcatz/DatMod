@@ -1,15 +1,19 @@
-package xlxacidxlx.datmod.block;
+package xlxacidxlx.datmod.register;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.ConfigHandler;
+import xlxacidxlx.datmod.base.Block;
+import xlxacidxlx.datmod.block.*;
 
 /**
  * Created by Acid on 10/26/2016.
  */
-public class ModBlocks {
+public class Blocks {
 	public static Diamondium diamondium;
 	public static DiamondiumOre diamondiumOre;
 	public static Emeraldi emeraldi;
@@ -40,7 +44,7 @@ public class ModBlocks {
 	 *
 	 * @param block The block to register
 	 */
-	private static void registerBlock(BaseBlock block) {
+	private static void registerBlock(Block block) {
 		GameRegistry.register(block);
 		GameRegistry.register(new ItemBlock(block), block.getResourceLocation());
 	}
@@ -79,7 +83,8 @@ public class ModBlocks {
 	 *
 	 * @param block The block to register
 	 */
-	private static void registerRender(BaseBlock block) {
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(Block block) {
 		Item item = Item.getItemFromBlock(block);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, block.getModelResourceLocation());
 	}
@@ -87,6 +92,7 @@ public class ModBlocks {
 	/**
 	 * Registers all the model registers for the blocks in this class
 	 */
+	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
 		registerRender(diamondium);
 		registerRender(diamondiumOre);

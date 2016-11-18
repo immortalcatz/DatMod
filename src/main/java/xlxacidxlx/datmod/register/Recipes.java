@@ -1,18 +1,14 @@
-package xlxacidxlx.datmod.crafting;
+package xlxacidxlx.datmod.register;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import xlxacidxlx.datmod.ConfigHandler;
-import xlxacidxlx.datmod.block.ModBlocks;
-import xlxacidxlx.datmod.item.BaseItem;
-import xlxacidxlx.datmod.item.ModItems;
+import xlxacidxlx.datmod.base.Item;
 
 /**
  * Created by Acid on 11/10/2016.
  */
-public class ModRecipes {
+public class Recipes {
 	/**
 	 * Registers all the recipes during Forge's initialization event
 	 */
@@ -49,37 +45,37 @@ public class ModRecipes {
 	 * Registers the recipes
 	 */
 	private static void registerRecipes() {
-		BaseItem diamondiumIngot = ModItems.diamondiumIngot;
-		BaseItem emeraldiIngot = ModItems.emeraldiIngot;
-		BaseItem goldiriteIngot = ModItems.goldiriteIngot;
-		BaseItem ironiumIngot = ModItems.ironiumIngot;
+		Item diamondiumIngot = Items.diamondiumIngot;
+		Item emeraldiIngot = Items.emeraldiIngot;
+		Item goldiriteIngot = Items.goldiriteIngot;
+		Item ironiumIngot = Items.ironiumIngot;
 
-		Item stick = Items.STICK;
-		Item redstone = Items.REDSTONE;
+		net.minecraft.item.Item stick = net.minecraft.init.Items.STICK;
+		net.minecraft.item.Item redstone = net.minecraft.init.Items.REDSTONE;
 
 		// Axes
-		GameRegistry.addRecipe(new ItemStack(ModItems.diamondiumAxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.diamondiumAxe), new Object[]{
 				" DD",
 				" SD",
 				" S ",
 				'D', diamondiumIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.emeraldiAxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.emeraldiAxe), new Object[]{
 				" EE",
 				" SE",
 				" S ",
 				'E', emeraldiIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.goldiriteAxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.goldiriteAxe), new Object[]{
 				" GG",
 				" SG",
 				" S ",
 				'G', goldiriteIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.ironiumAxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.ironiumAxe), new Object[]{
 				" II",
 				" SI",
 				" S ",
@@ -88,25 +84,25 @@ public class ModRecipes {
 		});
 
 		// Blocks
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.diamondium), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Blocks.diamondium), new Object[]{
 				"DDD",
 				"DDD",
 				"DDD",
 				'D', diamondiumIngot
 		});
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.emeraldi), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Blocks.emeraldi), new Object[]{
 				"EEE",
 				"EEE",
 				"EEE",
 				'E', emeraldiIngot
 		});
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.goldirite), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Blocks.goldirite), new Object[]{
 				"GGG",
 				"GGG",
 				"GGG",
 				'G', goldiriteIngot
 		});
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.ironium), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Blocks.ironium), new Object[]{
 				"III",
 				"III",
 				"III",
@@ -114,7 +110,7 @@ public class ModRecipes {
 		});
 
 		// Magnet
-		GameRegistry.addRecipe(new ItemStack(ModItems.magnetItem), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.magnetItem), new Object[]{
 				"III",
 				"IRI",
 				"I I",
@@ -123,28 +119,28 @@ public class ModRecipes {
 		});
 
 		// Pickaxes
-		GameRegistry.addRecipe(new ItemStack(ModItems.diamondiumPickaxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.diamondiumPickaxe), new Object[]{
 				"DDD",
 				" S ",
 				" S ",
 				'D', diamondiumIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.emeraldiPickaxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.emeraldiPickaxe), new Object[]{
 				"EEE",
 				" S ",
 				" S ",
 				'E', emeraldiIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.goldiritePickaxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.goldiritePickaxe), new Object[]{
 				"GGG",
 				" S ",
 				" S ",
 				'G', goldiriteIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.ironiumPickaxe), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.ironiumPickaxe), new Object[]{
 				"III",
 				" S ",
 				" S ",
@@ -153,28 +149,28 @@ public class ModRecipes {
 		});
 
 		// Shovels
-		GameRegistry.addRecipe(new ItemStack(ModItems.diamondiumShovel), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.diamondiumShovel), new Object[]{
 				" D ",
 				" S ",
 				" S ",
 				'D', diamondiumIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.emeraldiShovel), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.emeraldiShovel), new Object[]{
 				" E ",
 				" S ",
 				" S ",
 				'E', emeraldiIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.goldiriteShovel), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.goldiriteShovel), new Object[]{
 				" G ",
 				" S ",
 				" S ",
 				'G', goldiriteIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.ironiumShovel), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.ironiumShovel), new Object[]{
 				" I ",
 				" S ",
 				" S ",
@@ -183,28 +179,28 @@ public class ModRecipes {
 		});
 
 		// Swords
-		GameRegistry.addRecipe(new ItemStack(ModItems.diamondiumSword), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.diamondiumSword), new Object[]{
 				" D ",
 				" D ",
 				" S ",
 				'D', diamondiumIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.emeraldiSword), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.emeraldiSword), new Object[]{
 				" E ",
 				" E ",
 				" S ",
 				'E', emeraldiIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.goldiriteSword), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.goldiriteSword), new Object[]{
 				" G ",
 				" G ",
 				" S ",
 				'G', goldiriteIngot,
 				'S', stick
 		});
-		GameRegistry.addRecipe(new ItemStack(ModItems.ironiumSword), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(Items.ironiumSword), new Object[]{
 				" I ",
 				" I ",
 				" S ",
@@ -251,14 +247,14 @@ public class ModRecipes {
 		float xpIronium = xp;
 		float xpLeather = 0.1f;
 
-		registerSmeltingRecipe(new ItemStack(ModBlocks.diamondiumOre), new ItemStack(ModItems.diamondiumIngot), xpDiamondium);
-		registerSmeltingRecipe(new ItemStack(ModBlocks.emeraldiOre), new ItemStack(ModItems.emeraldiIngot), xpEmeraldi);
-		registerSmeltingRecipe(new ItemStack(ModBlocks.goldiriteOre), new ItemStack(ModItems.goldiriteIngot), xpGoldirite);
-		registerSmeltingRecipe(new ItemStack(ModBlocks.ironiumOre), new ItemStack(ModItems.ironiumIngot), xpIronium);
+		registerSmeltingRecipe(new ItemStack(Blocks.diamondiumOre), new ItemStack(Items.diamondiumIngot), xpDiamondium);
+		registerSmeltingRecipe(new ItemStack(Blocks.emeraldiOre), new ItemStack(Items.emeraldiIngot), xpEmeraldi);
+		registerSmeltingRecipe(new ItemStack(Blocks.goldiriteOre), new ItemStack(Items.goldiriteIngot), xpGoldirite);
+		registerSmeltingRecipe(new ItemStack(Blocks.ironiumOre), new ItemStack(Items.ironiumIngot), xpIronium);
 
 		if (ConfigHandler.enableRottenFleshToLeatherRecipe) {
 			// Rotten flesh -> leather
-			registerSmeltingRecipe(new ItemStack(Items.ROTTEN_FLESH), new ItemStack(Items.LEATHER), xpLeather);
+			registerSmeltingRecipe(new ItemStack(net.minecraft.init.Items.ROTTEN_FLESH), new ItemStack(net.minecraft.init.Items.LEATHER), xpLeather);
 		}
 	}
 }

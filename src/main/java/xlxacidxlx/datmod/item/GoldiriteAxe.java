@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemAxe;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class GoldiriteAxe extends BaseItemAxe {
+public class GoldiriteAxe extends ItemAxe {
 	/**
 	 * Constructs the Goldirite Axe
 	 */
-	GoldiriteAxe() {
+	public GoldiriteAxe() {
 		super(Materials.goldirite, "Goldirite Axe", Materials.goldirite.getDamageVsEntity(), Materials.goldirite.getEfficiencyOnProperMaterial());
 
 		setImplemented(true);

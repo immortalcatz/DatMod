@@ -1,13 +1,17 @@
-package xlxacidxlx.datmod.item;
+package xlxacidxlx.datmod.register;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.ConfigHandler;
+import xlxacidxlx.datmod.base.*;
+import xlxacidxlx.datmod.item.*;
 
 /**
  * Created by Acid on 10/26/2016.
  */
-public class ModItems {
+public class Items {
 	public static DiamondiumAxe diamondiumAxe;
 	public static DiamondiumDust diamondiumDust;
 	public static DiamondiumIngot diamondiumIngot;
@@ -125,7 +129,8 @@ public class ModItems {
 	 *
 	 * @param item The item to render
 	 */
-	private static void registerRender(BaseItem item) {
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(Item item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
@@ -134,7 +139,8 @@ public class ModItems {
 	 *
 	 * @param item The item to render
 	 */
-	private static void registerRender(BaseItemAxe item) {
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(ItemAxe item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
@@ -143,7 +149,8 @@ public class ModItems {
 	 *
 	 * @param item The item to render
 	 */
-	private static void registerRender(BaseItemPickaxe item) {
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(ItemPickaxe item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
@@ -152,7 +159,8 @@ public class ModItems {
 	 *
 	 * @param item The item to render
 	 */
-	private static void registerRender(BaseItemShovel item) {
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(ItemShovel item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 
@@ -161,7 +169,8 @@ public class ModItems {
 	 *
 	 * @param item The item to render
 	 */
-	private static void registerRender(BaseItemSword item) {
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(ItemSword item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, item.getModelResourceLocation());
 	}
 

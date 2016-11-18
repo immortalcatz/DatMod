@@ -7,7 +7,7 @@ import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import xlxacidxlx.datmod.block.ModBlocks;
+import xlxacidxlx.datmod.register.Blocks;
 
 import java.util.Random;
 
@@ -63,19 +63,19 @@ public class OreGenerator implements IWorldGenerator {
 	 */
 	private void generateEnd(World world, Random rand, int x, int z) {
 		if (ConfigHandler.enableOreGenerationDiamondium) {
-			generateOre(ModBlocks.diamondiumOre, world, rand, x, z, oreDiamondiumMaxVein, oreDiamondiumChance, oreDiamondiumMaxY);
+			generateOre(Blocks.diamondiumOre, world, rand, x, z, oreDiamondiumMaxVein, oreDiamondiumChance, oreDiamondiumMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationEmeraldi) {
-			generateOre(ModBlocks.emeraldiOre, world, rand, x, z, oreEmeraldiMaxVein, oreEmeraldiChance, oreEmeraldiMaxY);
+			generateOre(Blocks.emeraldiOre, world, rand, x, z, oreEmeraldiMaxVein, oreEmeraldiChance, oreEmeraldiMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationGoldirite) {
-			generateOre(ModBlocks.goldiriteOre, world, rand, x, z, oreGoldiriteMaxVein, oreGoldiriteChance, oreGoldiriteMaxY);
+			generateOre(Blocks.goldiriteOre, world, rand, x, z, oreGoldiriteMaxVein, oreGoldiriteChance, oreGoldiriteMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationIronium) {
-			generateOre(ModBlocks.ironiumOre, world, rand, x, z, oreIroniumMaxVein, oreIroniumChance, oreIroniumMaxY);
+			generateOre(Blocks.ironiumOre, world, rand, x, z, oreIroniumMaxVein, oreIroniumChance, oreIroniumMaxY);
 		}
 	}
 
@@ -89,19 +89,19 @@ public class OreGenerator implements IWorldGenerator {
 	 */
 	private void generateNether(World world, Random rand, int x, int z) {
 		if (ConfigHandler.enableOreGenerationDiamondium) {
-			generateOre(ModBlocks.diamondiumOre, world, rand, x, z, oreDiamondiumMaxVein, oreDiamondiumChance, oreDiamondiumMaxY);
+			generateOre(Blocks.diamondiumOre, world, rand, x, z, oreDiamondiumMaxVein, oreDiamondiumChance, oreDiamondiumMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationEmeraldi) {
-			generateOre(ModBlocks.emeraldiOre, world, rand, x, z, oreEmeraldiMaxVein, oreEmeraldiChance, oreEmeraldiMaxY);
+			generateOre(Blocks.emeraldiOre, world, rand, x, z, oreEmeraldiMaxVein, oreEmeraldiChance, oreEmeraldiMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationGoldirite) {
-			generateOre(ModBlocks.goldiriteOre, world, rand, x, z, oreGoldiriteMaxVein, oreGoldiriteChance, oreGoldiriteMaxY);
+			generateOre(Blocks.goldiriteOre, world, rand, x, z, oreGoldiriteMaxVein, oreGoldiriteChance, oreGoldiriteMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationIronium) {
-			generateOre(ModBlocks.ironiumOre, world, rand, x, z, oreIroniumMaxVein, oreIroniumChance, oreIroniumMaxY);
+			generateOre(Blocks.ironiumOre, world, rand, x, z, oreIroniumMaxVein, oreIroniumChance, oreIroniumMaxY);
 		}
 	}
 
@@ -115,19 +115,19 @@ public class OreGenerator implements IWorldGenerator {
 	 */
 	private void generateOverworld(World world, Random rand, int x, int z) {
 		if (ConfigHandler.enableOreGenerationDiamondium) {
-			generateOre(ModBlocks.diamondiumOre, world, rand, x, z, oreDiamondiumMaxVein, oreDiamondiumChance, oreDiamondiumMaxY);
+			generateOre(Blocks.diamondiumOre, world, rand, x, z, oreDiamondiumMaxVein, oreDiamondiumChance, oreDiamondiumMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationEmeraldi) {
-			generateOre(ModBlocks.emeraldiOre, world, rand, x, z, oreEmeraldiMaxVein, oreEmeraldiChance, oreEmeraldiMaxY);
+			generateOre(Blocks.emeraldiOre, world, rand, x, z, oreEmeraldiMaxVein, oreEmeraldiChance, oreEmeraldiMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationGoldirite) {
-			generateOre(ModBlocks.goldiriteOre, world, rand, x, z, oreGoldiriteMaxVein, oreGoldiriteChance, oreGoldiriteMaxY);
+			generateOre(Blocks.goldiriteOre, world, rand, x, z, oreGoldiriteMaxVein, oreGoldiriteChance, oreGoldiriteMaxY);
 		}
 
 		if (ConfigHandler.enableOreGenerationIronium) {
-			generateOre(ModBlocks.ironiumOre, world, rand, x, z, oreIroniumMaxVein, oreIroniumChance, oreIroniumMaxY);
+			generateOre(Blocks.ironiumOre, world, rand, x, z, oreIroniumMaxVein, oreIroniumChance, oreIroniumMaxY);
 		}
 	}
 

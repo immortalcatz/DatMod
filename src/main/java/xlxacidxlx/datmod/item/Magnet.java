@@ -12,19 +12,22 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.ConfigHandler;
 import xlxacidxlx.datmod.DatMod;
+import xlxacidxlx.datmod.base.Item;
 
 import java.util.List;
 
 /**
  * Created by Acid on 10/26/2016.
  */
-public class Magnet extends BaseItem {
+public class Magnet extends Item {
 	/**
 	 * Whether the magnet is active or not
 	 */
-	private static boolean active = false;
+	private static boolean active;
 
 	/**
 	 * Constructs the Magnet
@@ -38,6 +41,7 @@ public class Magnet extends BaseItem {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 		tooltip.add("It's very... attractive!");
 		super.addInformation(stack, playerIn, tooltip, advanced);
@@ -57,7 +61,12 @@ public class Magnet extends BaseItem {
 			tags.setBoolean("active", false);
 		}
 
-		if (active && tags.getBoolean("active")) {
+		boolean activeNbt = tags.getBoolean("active");
+		if (activeNbt && !active) {
+			active = true;
+		}
+
+		if (active && activeNbt) {
 			return true;
 		} else {
 			return false;

@@ -1,6 +1,14 @@
 # Changelog
 The following is a list of changes in each release of the mod.
 
+## 1.1.0
+This update fixes some issues. It's recommended to update to this version.
+
+- Fixes #15 - Magnet State Doesn't Persist on Reload, this should actually be fixed now.. I hope.. lol
+- Fixes #18 - Some classes missing @SideOnly annotation
+- Fixes #17 - Change Creative Tabs to use Mod Items
+- Fixes #19 - Code Refactor, moved some classes around
+
 ## 1.0.0 - The Gold Update
 This update has a few minor changes. It's recommend to update to this version.
 

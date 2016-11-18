@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemAxe;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-public class DiamondiumAxe extends BaseItemAxe {
+public class DiamondiumAxe extends ItemAxe {
 	/**
 	 * Constructs the Diamondium Axe
 	 */
-	DiamondiumAxe() {
+	public DiamondiumAxe() {
 		super(Materials.diamondium, "Diamondium Axe", Materials.diamondium.getDamageVsEntity(), Materials.diamondium.getEfficiencyOnProperMaterial());
 
 		setImplemented(true);

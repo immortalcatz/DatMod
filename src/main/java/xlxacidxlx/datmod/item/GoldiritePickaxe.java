@@ -1,15 +1,16 @@
 package xlxacidxlx.datmod.item;
 
 import xlxacidxlx.datmod.Materials;
+import xlxacidxlx.datmod.base.ItemPickaxe;
 
 /**
  * Created by Acid on 11/1/2016.
  */
-class GoldiritePickaxe extends BaseItemPickaxe {
+public class GoldiritePickaxe extends ItemPickaxe {
 	/**
 	 * Constructs the Goldirite Pickaxe
 	 */
-	GoldiritePickaxe() {
+	public GoldiritePickaxe() {
 		super(Materials.goldirite, "Goldirite Pickaxe");
 
 		setImplemented(true);

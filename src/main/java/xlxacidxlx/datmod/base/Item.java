@@ -1,9 +1,10 @@
-package xlxacidxlx.datmod.item;
+package xlxacidxlx.datmod.base;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import xlxacidxlx.datmod.DatMod;
 import xlxacidxlx.datmod.creativetab.CreativeTabs;
 
@@ -12,19 +13,16 @@ import java.util.List;
 /**
  * Created by Acid on 11/1/2016.
  */
-class BaseItemPickaxe extends ItemPickaxe {
+public class Item extends net.minecraft.item.Item {
 	private boolean implemented = false;
 
 	/**
-	 * Constructs the BaseItemPickaxe
+	 * Constructs the BaseItem
 	 *
-	 * @param material The material the pickaxe is made of
-	 * @param name     The name of the pickaxe
+	 * @param name The name of the item
 	 */
-	BaseItemPickaxe(ToolMaterial material, String name) {
-		super(material);
-
-		setCreativeTab(CreativeTabs.tools);
+	public Item(String name) {
+		setCreativeTab(CreativeTabs.items);
 
 		name = name.toLowerCase().replace(" ", "");
 		setRegistryName(DatMod.MODID, name);
@@ -32,6 +30,7 @@ class BaseItemPickaxe extends ItemPickaxe {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 		if (!isImplemented()) {
 			tooltip.add("[Not implemented!]");
@@ -45,8 +44,17 @@ class BaseItemPickaxe extends ItemPickaxe {
 	 *
 	 * @return ModelResourceLocation
 	 */
-	ModelResourceLocation getModelResourceLocation() {
+	public ModelResourceLocation getModelResourceLocation() {
 		return new ModelResourceLocation(getRegistryName(), "inventory");
+	}
+
+	/**
+	 * Gets the item's name
+	 *
+	 * @return String
+	 */
+	public String getName() {
+		return this.toString().toLowerCase();
 	}
 
 	/**

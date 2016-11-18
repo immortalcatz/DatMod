@@ -1,11 +1,13 @@
-package xlxacidxlx.datmod.event;
+package xlxacidxlx.datmod.register;
 
 import net.minecraftforge.common.MinecraftForge;
+import xlxacidxlx.datmod.event.EntityJoinWorld;
+import xlxacidxlx.datmod.event.LivingDrops;
 
 /**
  * Created by Acid on 10/26/2016.
  */
-public class ModEvents {
+public class Events {
 	private static EntityJoinWorld entityJoinWorldEvent = new EntityJoinWorld();
 	private static LivingDrops livingDropsEvent = new LivingDrops();
 
